@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MYROXX – Sites Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Montserrat', sans-serif; margin:0; padding:0; color:#fff; background:#2E004F;}
+nav {background:#3B0066; padding:15px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;}
+nav .logo {font-weight:700; color:#FFD700; font-size:1.5em;}
+nav ul {list-style:none; display:flex; margin:0; padding:0;}
+nav ul li {margin:0 15px;}
+nav ul li a {color:#FFD700; text-decoration:none; font-weight:700;}
+nav ul li a:hover{color:#fff;}
+.burger {display:none; cursor:pointer; flex-direction:column; gap:5px;}
+.burger div{width:25px; height:3px; background:#FFD700; transition:0.3s;}
+@media(max-width:768px){
+  nav ul {display:none; flex-direction:column; background:#3B0066; position:absolute; top:60px; right:0; width:200px; padding:20px; border-radius:10px;}
+  nav ul.active{display:flex;}
+  .burger {display:flex;}
+}
+header{padding:60px 20px; text-align:center;}
+header h1{font-size:2.5em;}
+header p{margin-bottom:30px;}
+.service{background:#3B0066; margin:20px auto; padding:30px; border-radius:20px; max-width:700px;}
+.service h2{color:#FFD700; margin-bottom:15px;}
+a.button {display:inline-block; background:#FFD700; color:#3B0066; padding:12px 30px; border-radius:50px; font-weight:700; text-decoration:none; margin-top:10px; transition:0.3s;}
+a.button:hover {background:#e6c200;}
+footer {background:#3B0066; color:#FFD700; text-align:center; padding:30px 20px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MYROXX</div>
+  <ul id="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="sites.html">Sites Web</a></li>
+    <li><a href="airbnb.html">Conciergerie Airbnb</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="burger" id="burger"><div></div><div></div><div></div></div>
+</nav>
+
+<header>
+<h1>Nos Packs Sites Web</h1>
+<p>Choisissez un pack adapté à vos besoins et commencez à booster votre présence en ligne.</p>
+</header>
+
+<div class="service">
+<h2>Pack Starter</h2>
+<p>Site vitrine 1 page + formulaire de contact. Responsive et livré en 5 jours.</p>
+<p>Prix : 350€</p>
+<a href="contact.html" class="button">Commander ce pack</a>
+</div>
+
+<div class="service">
+<h2>Pack Premium</h2>
+<p>Site complet 2–3 pages + intégration réseaux sociaux. SEO de base inclus. Livraison 7–10 jours.</p>
+<p>Prix : 500–700€</p>
+<a href="contact.html" class="button">Commander ce pack</a>
+</div>
+
+<footer>
+© 2026 MYROXX – Tous droits réservés
+</footer>
+
+<script>
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav-links');
+burger.addEventListener('click', ()=>{nav.classList.toggle('active');});
+</script>
+
+</body>
+</html>
